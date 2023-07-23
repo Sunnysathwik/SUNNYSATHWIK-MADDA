@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #e67e22;
+      --background-color: #f1f2f6;
+      --text-color: #333;
+      --accent-color: #3498db;
+    }
+    .fixed-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .navbar {
+      background-color: var(--primary-color);
+    }
+
+    .jumbotron {
+      background-image: url('./jomb.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 150px 0;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-img-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover .card-img-overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .certificate-card {
+      background-color: var(--secondary-color);
+      border: none;
+      border-radius: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .certificate-card .card-header {
+      background-color: var(--primary-color);
+      border-bottom: none;
+    }
+
+    .graphic {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4 fade-in">Welcome to My Portfolio</h1>
+      <p class="lead fade-in">I'm a web developer passionate about creating awesome websites.</p>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fade-in">About Me</h2>
+      <div class="row">
+        <div class="col-md-6 fade-in">
+          <img src="p2.jpg" alt="Profile Image" class="img-fluid rounded-circle mb-3 pulse" style="width: 400px;height: 400px;">
+        </div>
+        <div class="col-md-6 fade-in" style="display: flex; justify-content: center;align-items: flex-start; flex-direction: column;">
+          <h3>Sunny Sathwik Madda</h3>
+          <h5>Web Developer</h5>
+          <p>A highly driven individual looking for a challenging position in an
+            organization specializing in tech which will be the impetus to my
+            professional and personal prosperity and will play to my strengths</p>
+          <!-- <p>Fusce eu felis sed lacus imperdiet viverra. Nunc eu mauris et lectus tincidunt consequat. Vivamus vulputate metus vel odio tempus ullamcorper.</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 fade-in">Projects</h2>
+      <div class="row">
+        <div class="col-md-4 fade-in">
+          <div class="card mb-4">
+            <img src="data:image/png;base64,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" class="card-img-top" alt="Project 1">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-title text-white">Bestowing Horizontal Layout For Data Mining</h5>
+            </div>
+            
+          </div>
+          <p>The Project is to anaylze the data using data mining techniquies</p>
+        </div>
+        <div class="col-md-4 fade-in">
+          <div class="card mb-4">
+            <img src="https://www.orangemantra.com/blog/wp-content/uploads/2015/12/ecommerce-web-development.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-title text-white">E-Commerce</h5>
+            </div>
+          </div>
+          <p>We Designed a fullstack project on e-commerce</p>
+        </div>
+        <!-- <div class="col-md-4 fade-in">
+          <div class="card mb-4">
+            <img src="path/to/project-3.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-title text-white">Project 3</h5>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, enim.</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fade-in">Certificates</h2>
+      <div class="row">
+        <div class="col-md-4 fade-in">
+          <div class="card certificate-card">
+            <div class="card-header text-white">Udemy</div>
+            <div class="card-body">
+              <img src="./javacollections.jpg" alt="Certificate 1" class="graphic">
+              <p class="card-text">Course certification on Java Collections by Udemy</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in">
+          <div class="card certificate-card">
+            <div class="card-header text-white">Udemy</div>
+            <div class="card-body">
+              <img src="./udemyhtmlcss.jpg" alt="Certificate 2" class="graphic">
+              <p class="card-text">Course certification on HTML and CSS by Udemy</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in">
+          <div class="card certificate-card">
+            <div class="card-header text-white">Udemy</div>
+            <div class="card-body">
+              <img src="./udemyphpmysql.jpg" alt="Certificate 2" class="graphic">
+              <p class="card-text">Course certification on PHP and MYSQL by Udemy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 fade-in">Education</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3 fade-in">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-dark" >Bachelors of Technology Engineering in Computer science</h5>
+              <p class="card-text">Sri Vasavi Engineering College 2020-2024</p>
+              <p class="card-text">CGPA: 7.12</p>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Intermediate</h5>
+              <p class="card-text">Sri Chaitanya junior College</p>
+              <p class="card-text">CGPA: 7.5</p>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-dark">SSC</h5>
+              <p class="card-text">Sri Chaitanya junior School</p>
+              <p class="card-text">CGPA: 9.2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <!-- <div class="container">
+      <h2 class="text-center mb-4 fade-in">Contact Me</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3 fade-in">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+    <div class="container mt-5">
+      <h2>Contact Me</h2>
+      <p>Feel free to get in touch with me via the following channels:</p>
+  
+      <ul>
+        <li>Phone: <a href="tel:+91 7989297389">7989297389</a></li>
+        <li>Email: <a href="mailto:sunnysathwik9@gmail.com">sunnysathwik9@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/sunny-sathwik-a1127a255">https://www.linkedin.com/in/sunny-sathwik-a1127a255</a></li>
+        <li>GitHub: <a href="https://github.com/Sunnysathwik">https://github.com/Sunnysathwik</a></li>
+        
+      </ul>
+  
+      
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
